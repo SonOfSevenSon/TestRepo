@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #3d0404;
+	overflow: hidden;
+	color: #e5c826;
+	font-size: 36px;
+	font-family: sans-serif;
+}
+
+.tooltip-box {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+}
+
+.tooltip {
+	position: relative;
+}
+
+.tooltip::before {
+	display: none;
+	position: absolute;
+	width: 105px;
+	padding: 0.5em 1em;
+	border-radius: 8px;
+	background-color: #585151de;
+	box-shadow: 5px 5px 1px 1px #000;
+	font-size: 10px;
+	text-align: center;
+}
+
+.tooltip:hover::before {
+	display: block;
+}
+
+.tooltip-top::before {
+	content: 'podpowiedź nr 1';
+	bottom: 130%;
+}
+
+.tooltip-right::before {
+	content: 'podpowiedź nr 2';
+	left: 110%;
+}
